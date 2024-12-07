@@ -1,0 +1,267 @@
+.container {
+    width: 100%;
+    height: 545px;
+    background-color: rgba(28, 43, 76, 0.262);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.add-folder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-right: 15px;
+}
+
+.container input {
+    margin-right: 25px;
+    margin-top: 30px;
+}
+
+.container #folders {
+    align-self: flex-start;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+#folders > div {
+    margin-bottom: 10px;
+}
+
+.container p {
+    margin-bottom: 2px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.container button {
+    padding: 10px 20px;
+    background-color: rgb(23, 32, 52);
+    color: #ffffff;
+    font-family: LEMONMILK-Light;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.folders-background {
+    background-color: rgb(23, 32, 52);
+    border-radius: 10px;
+    width: 80%;
+    height: 70%; /* Set a fixed height */
+    overflow-y: auto; /* Make it scrollable */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: LEMONMILK-Bold;
+    src: url(LEMONMILK-Bold.otf);
+}
+
+@font-face {
+    font-family: LEMONMILK-Light;
+    src: url(LEMONMILK-Light.otf);
+}
+
+nav {
+    background-color: #ffffff;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    color: rgb(23, 32, 52);
+    font-family: LEMONMILK-Bold;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    font-family: LEMONMILK-Light;
+    font-size: 14px;
+}
+.nav-item {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(23, 32, 52);
+}
+.nav-item.current{
+    margin: 0 10px;
+    font-family: LEMONMILK-Bold;
+    text-decoration: none;
+    color: rgb(23, 32, 52);
+}
+.btn {
+    padding: 8px 16px;
+    font-family: LEMONMILK-Light;
+    font-size: 12px;
+    background-color: rgb(23, 32, 52);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container1 {
+    width: 100%;
+    height: 545px;
+    background-color: rgba(28, 43, 76, 0.262);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 180px 0;
+}
+.title {
+    font-family: LEMONMILK-Bold;
+    font-size: 40px;
+    color: rgb(23, 32, 52);
+}
+.description {
+    font-family: Arial;
+    font-size: 14px;
+    color: #172034;
+}
+.start-btn {
+    background-color: rgb(23, 32, 52);
+    color: white;
+    font-family: LEMONMILK-Light;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 60px;
+    width: 120px;
+}
+
+.folder-item {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Align items vertically */
+    padding: 10px;
+    position: relative;
+    justify-content: space-between; /* Aligns folder name to left and delete button to right */
+    max-height: 50px !important;
+}
+
+.folder-item::after {
+    content: ""; /* Empty content to create the line */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Position the line from the center */
+    transform: translateX(-50%); /* Offset the line to the left by half of its own width to truly center it */
+    width: 97%; /* Set the width of the line */
+    border-bottom: 1px solid #ccc; /* Add the line */
+}
+
+.folder-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.folder-text {
+    flex-grow: 1; /* Allows the folder name to take up available space */
+}
+
+
+.delete-btn {
+    background-color: rgb(217, 0, 0) !important; /* Red background for delete button */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Width of the delete button */
+    height: 30px; /* Height of the delete button */
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .description{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .start-btn{
+        height: 50px;
+        width: 100px;
+    }
+
+    .nav-item{
+        margin: 0 1px;
+    }
+
+    .nav-right{
+        font-size: 12px;
+    }
+
+    .btn{
+        padding: 6px 12px;
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+    input[type="text"] {
+        width: 260px;
+        margin-right: 30px;
+    }
+
+    .folders-background {
+        width: 90%;
+    }
+
+    .container button {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    .add-folder{
+        width: 90%;
+    }
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.folder-item:hover {
+    background-color: rgba(0, 86, 179, 0.2); /* Change this color as needed */
+}

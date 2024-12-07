@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JandelShare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <span>JandelShare</span>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-item current">Home</a>
+            <button class="nav-item btn" onclick="window.location.href='files.html'">Files</button>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <div class="title">JANDELSHARE</div>
+        <div class="description">Upload files and create folders online for free</div>
+        <a href="files.html">
+            <button class="start-btn">Start Now!</button>
+        </a>
+    </div>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

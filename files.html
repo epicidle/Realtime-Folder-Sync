@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JandelShare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <span>JandelShare</span>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="nav-item">Home</a>
+            <button class="nav-item btn" onclick="window.location.href='files.html'">Files</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="add-folder">
+            <div class="left"></div>
+            <input type="text" id="folderName" placeholder="Enter folder name">
+            <button class="right">Create Folder</button>
+            <button class="right" onclick="window.location.href='files.html'">Back to Root</button>
+        </div>
+        <input type="hidden" id="currentParentId" value="0">
+        <div class="folders-background">
+            <div id="folders"></div>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"></script>
+
+    <!-- Your script file as a module -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
