@@ -45,7 +45,7 @@
 
 input[type="text"] {
     padding: 10px;
-    margin-bottom: 10px;
+
     width: 400px;
     border-radius: 5px;
 }
@@ -235,8 +235,9 @@ nav {
     }
 
     input[type="text"] {
-        width: 260px;
-        margin-right: 30px;
+        width: 170px;
+        margin: 5px;
+        height: 38px;
     }
 
     .folders-background {
@@ -248,8 +249,9 @@ nav {
         font-size: 10px;
     }
 
-    .add-folder{
-        width: 90%;
+    .right {
+        margin: 18px 5px 18px 0px;
+        font-size: 6px !important;
     }
 }
 
