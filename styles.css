@@ -144,7 +144,7 @@ nav {
 }
 .title {
     font-family: LEMONMILK-Bold;
-    font-size: 40px;
+    font-size: 50px;
     color: rgb(23, 32, 52);
 }
 .description {
@@ -160,8 +160,8 @@ nav {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    height: 60px;
-    width: 120px;
+    height: 40px;
+    width: 100px;
 }
 
 .folder-item {

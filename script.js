@@ -19,19 +19,19 @@ const db = getFirestore(app);
 // Create folder
 async function createFolder() {
     const folderName = document.getElementById('folderName').value.trim(); // Trim to avoid whitespace-only names
-    const parentId = document.getElementById('currentParentId').value;
+    const parentId = document.getElementById('currentParentId').value; // Get parent ID from the input (or wherever you are storing the parent ID)
 
     if (folderName !== '') {
         try {
             const folderRef = collection(db, "folders"); // Reference to the Firestore collection
             await addDoc(folderRef, {
                 name: folderName,
-                parent_id: parentId === "0" ? null : parentId,
+                parent_id: parentId === "0" ? null : parentId, // If parentId is "0", set it to null (indicating root)
                 created_at: serverTimestamp() // Optional: Add a timestamp for folder creation
             });
 
             console.log("Folder created successfully!");
-            loadFolders(parentId); // Immediately refresh the folders display
+            loadFolders(parentId); // Immediately refresh the folders display inside the current folder
             document.getElementById('folderName').value = ""; // Clear the input field
         } catch (error) {
             console.error("Error creating folder:", error);
@@ -40,7 +40,6 @@ async function createFolder() {
         console.warn("Folder name cannot be empty."); // Optional: Warn about empty folder name
     }
 }
-
 
 // Load folders
 function loadFolders(parentId = 0) {
@@ -107,10 +106,10 @@ function loadFolders(parentId = 0) {
     }
 }
 
-
 // Open folder
 function openFolder(folderId) {
-    loadFolders(folderId);
+    loadFolders(folderId); // Pass the folder ID to load subfolders
+    document.getElementById('currentParentId').value = folderId; // Update the currentParentId input with the folder ID
 }
 
 // Attach event listeners
